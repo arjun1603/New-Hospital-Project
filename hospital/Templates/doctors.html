@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<h1 style="text-align: center; background-color: gray;"><marquee behavior="scroll" direction="right" width:80px height:100px scrollamount = "20">OUR DOCTORS
+</marquee></h1>
+
+{% for i in doc %}
+
+<div style=" display: inline-block; border-radius: 15px; width:30% ; background-color: yellowgreen; margin-left: 20px; margin-top: 30px; text-align: center;">
+
+   <img src="{{ i.doc_image.url }}" class="card-img-top" style="height: 300px;" alt="....">
+
+
+   {{ i.doc_name }}<br>
+   {{ i.dep_name }}<br>
+   {{ i.doc_spec }}
+  
+</div>
+{% endfor %}
+
+{% endblock %}

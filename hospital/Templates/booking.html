@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+<div style="width: 600px; height: 500px; margin-left: 500px; margin-top: 100px; text-align: center; background-color: grey; border: 100px; padding: 20px;">
+
+<h1>Book Your Appointment Here</h1><br>
+<br>
+<form action ="" method="post">
+    {% csrf_token %}
+    <table>
+    
+        {{ form|crispy }}
+    <br>
+        <!-- <tr>
+            <td></td>
+            <td> -->
+                
+            <!-- </td>
+        </tr> -->
+        <button>SUBMIT</button>
+    </table>
+</form>
+</div>
+
+<!-- <div style="margin-left: 500px; margin-right: 500px; text-align: center;">
+    <button>SUBMIT</button>
+</div> -->
+
+{% endblock %}

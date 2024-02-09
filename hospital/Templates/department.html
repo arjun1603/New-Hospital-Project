@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 style="text-align: center; background-color: gray;"><marquee behavior="scroll" direction="right" width:80px height:100px scrollamount = "20">OUR DEPARTMENTS
+</marquee></h1>
+<hr>
+{% for i in dept %}
+
+<div style=" text-align:center;  border: 20px; margin-left:200px; width:70%; height: 250px; background-color: lightslategray;padding-left: 20px;padding-right: 20px; " ><hr><br> 
+<h1 style="color: white; padding-top: 10px;">{{ i.dep_name }}</h1>
+<p style="color: white; padding-top: 10px;">{{ i.dep_description }}</p>
+</div> 
+{% endfor %}
+
+
+{% endblock %}
